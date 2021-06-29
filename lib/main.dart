@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData.dark(),
+      
       home: DefaultTabController(
         length: 3,
         child: Scaffold(
@@ -65,7 +66,6 @@ class _MyHomePageState extends State<RotatePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    
       body: AnimatedList(
         key: listKey,
         initialItemCount: items.length,
@@ -130,7 +130,6 @@ class _SlidePageState extends State<SlidePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    
       body: AnimatedList(
         key: listKey,
         initialItemCount: items.length,
@@ -165,7 +164,7 @@ class _SlidePageState extends State<SlidePage> {
     items.removeAt(index);
     listKey.currentState.removeItem(
       index,
-      (context, animation) =>SideListItemWidget(
+      (context, animation) => SideListItemWidget(
         item: removeItem,
         animation: animation,
         onClicked: () {},
@@ -195,7 +194,6 @@ class _SizePageState extends State<SizePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    
       body: AnimatedList(
         key: listKey,
         initialItemCount: items.length,
@@ -230,7 +228,7 @@ class _SizePageState extends State<SizePage> {
     items.removeAt(index);
     listKey.currentState.removeItem(
       index,
-      (context, animation) =>SizeListItemWidget(
+      (context, animation) => SizeListItemWidget(
         item: removeItem,
         animation: animation,
         onClicked: () {},
